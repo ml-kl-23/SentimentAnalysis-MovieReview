@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
+</head>
+<body>
+<center>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+		
+		</div>
+		<h2>Sentiment Analysis </h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b></b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == 'neg' %}
+	<h2 style="color:red;">RESULT : negative </h2>
+	{% elif prediction == 'pos' %}
+	<h2 style="color:green;">RESULT : positive </h2>
+	{% endif %}
+
+	</div>
+</center>
+</body>
+</html>
